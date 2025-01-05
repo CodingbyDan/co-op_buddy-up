@@ -4,7 +4,10 @@
 <h3>Target Audience:</h3>
 <p>The target audience for CoBu would be anyone looking to find people to join for co-op sessions, or to form sessions that others could ask to join. This would help to encourage teamwork, tactics and cut down negative experiences that can arise by joining random sessions. 
 
-Ideally, there would be a way to create sessions and describe the kind of team that you're looking to form. Once others are accpeted, a private group chat would allow the team to communicate before/after starting any sessions.</p>
+Ideally, there would be a way to create sessions and describe the kind of team that you're looking to form. Once others are accepted, a private group chat would allow the team to communicate before/after starting any sessions.</p>
+
+<h3>Limitations:</h3>
+<p>While I would love to implement all the features, I don't think I currently have the knowledge to add them, so the first thing I will build is the blog or "Mission Board" to keep in theme with the gaming focus. If I can add drop-down menus, when the post is made the poster could add the play style and platform, and (hopefully) the playstyle could be colour coded as a visual representation, so Relaxed = Green / Regular = Blue / Competetive = Red.</p>
 
 <br>
 <h2>User Stories</h2>
@@ -43,3 +46,5 @@ Ideally, there would be a way to create sessions and describe the kind of team t
 <h2>Design Decisions</h2>
 
 <h3>Wireframes</h3>
+
+<h3>Colour Options</h3>
