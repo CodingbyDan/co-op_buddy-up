@@ -1,5 +1,5 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 
 # # Create your views here.
-# def users(response):
-#     return render()
+def register_view(request):
+    return render(request, "users/register.html")
