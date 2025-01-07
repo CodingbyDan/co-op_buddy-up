@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    A Squad Needs YOU! Sign Up Now!
+    User Login
 {% endblock %}
 
 {% block content %}
     <section>
-    <h1>A Squad Needs YOU! Sign Up Now!</h1>
-    <form class="signup" action="/users/register/" method="post">
+    <h1>User Login</h1>
+    <form class="signup" action="/users/login/" method="post">
         {% csrf_token %}
         {{ form }}
         <button class="signup-submit">Submit</button>

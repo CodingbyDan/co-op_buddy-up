@@ -14,9 +14,16 @@
 </head>
 <body>
     <nav>
-        <a href="/">Home</a> |
-        <a href="{% url 'posts:list' %}">Posts</a> |
-        <a href="/about">About</a> 
+        <a href="/">
+            <span aria-label="Home" title="Home">Home</span></a> |
+        <a href="{% url 'posts:list' %}">
+            <span aria-label="Posts" title="Posts">Posts</span></a> |
+        <a href="/about">
+            <span aria-label="About" title="About">About</span></a> |
+        <a href="{% url 'users:register' %}">
+            <span aria-label="Sign-up" title="Sign-up">Sign Up</span></a> |
+        <a href="{% url 'users:login' %}">
+            <span aria-label="User Login" title="User Login">User Login</span></a> 
     </nav>
     <main>
         {% block content %}
