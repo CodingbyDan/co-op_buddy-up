@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-import uuid
+from datetime import datetime
+
 
 PLAYSTYLE_CHOICES = (
     ('relaxed', 'RELAXED'),
@@ -33,14 +34,14 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='comments')
-    parent_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    body = models.CharField(max_length=150)
-    created = models.DateField(auto_now_add=True)
-    id = models.CharField(max_length=100, default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=80)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
 
     def __str__(self):
-        try:
-            return f'{self.author.username} : {self.body[:30]}'
-        except:
-            return f'no author : {self.body[30]}'
+        return f'Comment by {self.name} on {self.post}'
