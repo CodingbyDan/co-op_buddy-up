@@ -9,7 +9,12 @@
     <h1>{{ post.title }}</h1>          
         <p>{{ post.date }}</p>
         <p>{{ post.body }}</p>
-        <p>{{ post.platform }} || {{ post.playstyle }}</p>   
+        <p>{{ post.platform }} || {{ post.playstyle }}</p>  
+        {% for comment in post.comments.all %}
+            {{ comment.author.name}}
+            {{ comment.author.username }}
+            {{ comment.body }}
+        {% endfor %}
     </section>
 {% endblock %}
 
